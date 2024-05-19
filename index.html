@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Prabhakar's Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -13,15 +14,18 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: rgb(242, 242, 242);
         }
 
         header {
-            background: rgb(34, 34, 34);
+            background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
             color: #fff;
             padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
         header .container {
@@ -34,7 +38,8 @@
         }
 
         header h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
+            font-family: 'Georgia', serif;
         }
 
         header nav ul {
@@ -49,22 +54,19 @@
         header nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 1rem;
-            padding: 5px 10px;
+            font-size: 1.1rem;
+            padding: 10px 15px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
 
         header nav ul li a:hover {
-            background-color: rgb(100, 100, 100);
-        }
-
-        header nav ul li a:active {
-            background-color: rgb(150, 150, 150);
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .section {
-            padding: 2rem 0;
+            padding: 4rem 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         .container {
@@ -75,8 +77,10 @@
 
         h2 {
             text-align: center;
-            margin-bottom: 1rem;
-            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: #444;
+            font-family: 'Georgia', serif;
         }
 
         .about-container {
@@ -84,18 +88,19 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            background-color: rgb(45, 45, 48);
-            color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
             padding: 2rem;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .about-text {
             flex: 1;
             padding: 20px;
-            font-family: Arial, sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             line-height: 1.8;
+            font-family: 'Georgia', serif;
         }
 
         .about-image {
@@ -108,23 +113,37 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .about-image img:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .project {
             margin-bottom: 1.5rem;
-            padding: 1rem;
-            background-color: rgb(255, 250, 240);
+            padding: 2rem;
+            background-color: rgb(255, 255, 255);
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .project h3 {
             margin-bottom: 0.5rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            color: #333;
+            font-family: 'Georgia', serif;
+        }
+
+        .project p {
+            color: #555;
         }
 
         ul {
@@ -137,50 +156,43 @@
             margin: 0.5rem 0;
             padding: 0.5rem;
             border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        ul li:hover {
+            background-color: #ddd;
+            transform: scale(1.05);
         }
 
         footer {
-            background: rgb(34, 34, 34);
+            background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
             color: #fff;
             text-align: center;
             padding: 1rem 0;
         }
 
         #projects {
-            background: rgb(40, 47, 52);
-            color: #000000;
+            background: rgb(245, 245, 245);
+            color: #333;
         }
 
         #skills {
-            background: rgb(129, 121, 121);
-            color: #030303;
+            background: rgb(230, 230, 230);
+            color: #333;
         }
 
         #contact {
-            background: rgb(0, 0, 0);
+            background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
             color: #fff;
         }
 
-        .container:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        a {
+            color: #ffd700;
+            text-decoration: none;
         }
 
-        body {
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
-            background-color: rgb(242, 242, 242);
-        }
-
-        body {
-            background-image: url('images/Pattern-cover_1100x500-1024x465.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .skills-list li:hover {
-            transform: scale(1.1);
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -211,7 +223,7 @@
                     <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community. I am always excited to collaborate on interesting projects and bring ideas to life through code.</p>
                 </div>
                 <div class="about-image">
-                    <img src="images/WhatsApp-Image-2024-05-18.jpg" alt="My Picture">
+                    <img src="e:\C Drive\Documents\WhatsApp Image 2024-05-18 at 13.36.56_39176dba.jpg" alt="My Picture">
                 </div>
             </div>
         </div>
@@ -247,17 +259,5 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-            <p>Email: prabhakarjd2@gmail.com</p>
-            <p>Email: mayankjangid4442@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/prabhakar-23505a285" target="_blank">linkedin.com/in/prabhakar</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Prabhakar. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-
-</html>
+            <p>Email: <a href="mailto:prabhakarjd2@gmail.com">prabhakarjd2@gmail.com</a></p>
+            <p>Email: <a href="mailto:mayankjangid4442@gmail.com">mayankjangid4442@gmail.com</a></p>
