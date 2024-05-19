@@ -94,13 +94,9 @@
             flex: 1;
             padding: 20px;
             font-family: Arial, sans-serif;
-            /* Change the font family */
             font-size: 1.1rem;
-            /* Adjust the font size */
             line-height: 1.8;
-            /* Adjust the line height */
         }
-
 
         .about-image {
             flex: 1;
@@ -109,9 +105,14 @@
         }
 
         .about-image img {
-            width: 500px;
-            height: 550px;
+            max-width: 100%;
+            height: auto;
             border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.1);
         }
 
         .project {
@@ -145,14 +146,10 @@
             padding: 1rem 0;
         }
 
-      
-
         #projects {
             background: rgb(40, 47, 52);
             color: #000000;
         }
-
-
 
         #skills {
             background: rgb(129, 121, 121);
@@ -162,65 +159,28 @@
         #contact {
             background: rgb(0, 0, 0);
             color: #fff;
-
-            /* Add this CSS code for transition effect */
-            header nav ul li a {
-                color: #fff;
-                text-decoration: none;
-                font-size: 1rem;
-                padding: 5px 10px;
-                border-radius: 5px;
-                transition: background-color 0.3s, color 0.3s;
-                /* Added transition property */
-            }
-
-            header nav ul li a:hover {
-                background-color: rgb(100, 100, 100);
-            }
-
-            header nav ul li a:active {
-                background-color: rgb(150, 150, 150);
-            }
-
-        }
-/* Add this CSS for the 3D popup effect */
-.container:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Add background pattern */
-body {
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
-    background-color: rgb(242, 242, 242); /* Fallback color */
-}
-
-/* Add this if you want to use a background image */
-body {
-    background-image: url('e:\C Drive\Downloads\Pattern-cover_1100x500-1024x465.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.skills-list li:hover {
-    transform: scale(1.1);
-}
-
-
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s;
-            /* Add transition for smooth effect */
         }
 
-        .about-image img:hover {
+        .container:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+            background-color: rgb(242, 242, 242);
+        }
+
+        body {
+            background-image: url('images/Pattern-cover_1100x500-1024x465.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .skills-list li:hover {
             transform: scale(1.1);
-            /* Apply scale transformation on hover */
         }
     </style>
 </head>
@@ -245,25 +205,15 @@ body {
             <h2>About Me</h2>
             <div class="about-container">
                 <div class="about-text">
-                    <p>Hello! I'm Prabhakar, a passionate web developer with a deep love for coding and creating
-                        innovative web solutions. With a keen eye for design and a commitment to functionality, I strive
-                        to build websites that not only look great but also provide an excellent user experience.</p>
-                    <p>From a young age, I've been fascinated by technology and the endless possibilities it offers.
-                        This curiosity led me to explore the world of web development, where I discovered my true
-                        calling. Whether it's designing a sleek user interface or developing a robust backend, I enjoy
-                        every step of the process.</p>
-                    <p>In addition to web development, I enjoy learning new programming languages and frameworks, always
-                        staying up-to-date with the latest industry trends. I believe in continuous learning and
-                        constantly challenging myself to grow as a developer.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source
-                        projects, or sharing my knowledge with the developer community. I am always excited to
-                        collaborate on interesting projects and bring ideas to life through code.</p>
+                    <p>Hello! I'm Prabhakar, a passionate web developer with a deep love for coding and creating innovative web solutions. With a keen eye for design and a commitment to functionality, I strive to build websites that not only look great but also provide an excellent user experience.</p>
+                    <p>From a young age, I've been fascinated by technology and the endless possibilities it offers. This curiosity led me to explore the world of web development, where I discovered my true calling. Whether it's designing a sleek user interface or developing a robust backend, I enjoy every step of the process.</p>
+                    <p>In addition to web development, I enjoy learning new programming languages and frameworks, always staying up-to-date with the latest industry trends. I believe in continuous learning and constantly challenging myself to grow as a developer.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community. I am always excited to collaborate on interesting projects and bring ideas to life through code.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/WhatsApp-Image-2024-05-18.jpg" alt="My Picture">
                 </div>
             </div>
-            <div class="about-image">
-                <img src="e:\C Drive\Documents\WhatsApp Image 2024-05-18 at 13.36.56_39176dba.jpg" alt="My Picture">
-            </div>
-        </div>
         </div>
     </section>
 
@@ -272,15 +222,12 @@ body {
             <h2>Projects</h2>
             <div class="project">
                 <h3>Project One</h3>
-                <p>Build a fully functional e-commerce website with product listings, a shopping cart, checkout process,
-                    and payment integration.</p>
+                <p>Build a fully functional e-commerce website with product listings, a shopping cart, checkout process, and payment integration.</p>
             </div>
             <div class="project">
                 <h3>Project Two</h3>
-                <p>Develop a task management app where users can create, edit, delete, and organize tasks. Include
-                    features like deadlines, priority settings, and categorization..</p>
+                <p>Develop a task management app where users can create, edit, delete, and organize tasks. Include features like deadlines, priority settings, and categorization.</p>
             </div>
-            <!-- Add more projects as needed -->
         </div>
     </section>
 
@@ -291,9 +238,8 @@ body {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
-                <li>c </li>
+                <li>C</li>
                 <li>Python</li>
-                <!-- Add more skills as needed -->
             </ul>
         </div>
     </section>
@@ -302,11 +248,8 @@ body {
         <div class="container">
             <h2>Contact</h2>
             <p>Email: prabhakarjd2@gmail.com</p>
-            <p>mayankjangid4442@gmail.com</p>
-            <p>LinkedIn: <a
-                    href="https://www.linkedin.com/in/prabhakar-23505a285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank">linkedin.com/in/prabhakar</a></p>
-            <!-- Add more contact information as needed -->
+            <p>Email: mayankjangid4442@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/prabhakar-23505a285" target="_blank">linkedin.com/in/prabhakar</a></p>
         </div>
     </section>
 
